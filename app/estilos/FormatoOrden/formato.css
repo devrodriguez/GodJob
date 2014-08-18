@@ -1,0 +1,77 @@
+html, body{
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: verdana;
+	width: 100%;
+}
+
+.basic{
+	border: solid 1px #F5D0A9;
+	border-radius: 10px;
+	margin-top: 15px;
+	overflow: hidden;
+}
+
+.seccion{
+	font-size: 11px;
+	color: #B43104;
+	overflow: hidden;
+	margin: auto;
+	width: auto;
+}
+
+.contenedor{
+	display: block;
+	margin: 20px;
+	overflow: hidden;
+	width: 600px;
+}
+
+.no_orden{
+	margin-bottom: 10px;
+	width: 250px;
+}
+.sin_borde { border: none !important;}
+.tit_orden{
+	background-color: #00aa00;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	color: #FFF;
+	font-family: verdana;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+	padding: 5px;
+}
+.cant_orden{
+	color: #00aa00;
+	font-size: 18px;
+	padding: 5px;
+	font-weight: bold;
+}
+.tb_basic{
+	border: none;
+	border-radius: 5px;
+	border-spacing: 0;
+	border-collapse: collapse;
+	margin: auto;
+	margin: auto;
+	width: 100%;
+}
+
+.tb_basic td{
+	border: solid 1px #F5D0A9;
+	padding: 3px;
+	vertical-align: top;
+}
+.celda{
+	border-bottom: solid 1px #f5d0a9; padding: 2px; position: relative;
+}
+.celda > span{ position: absolute; right: 5px;}
+
+.seccion_int{
+	float: left;
+	margin: 5px;
+	width: 287px;
+}

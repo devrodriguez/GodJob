@@ -1,0 +1,309 @@
+
+body{
+    margin: 0px;
+    padding: 0px;
+    font-size: 12px !important;
+    font-family: verdana, 'Open Sans', Arial, sans-serif;
+    background: url(../imagenes/pattern-x.png) rgb(255, 255, 255) repeat;
+}
+
+input[type="text"], input[type="password"]{
+    border-radius: 5px;
+    font-size: 1em;
+    padding-left: 3px;
+}
+    input[type="text"]:hover{
+        border-color: rgb(28, 148, 196);
+    }
+
+input[type="file"]{
+    width: 200px;
+}
+
+.cont_bot_linea{
+    height: 50%; width: auto; margin: 0 auto; background-color: #fff; padding: 20px; 
+    border-top: solid 2px #eee;
+    border-bottom: solid 5px #aaa;
+}
+
+.bot_linea_prod{
+    background-color: #0489B1;
+    border: none;
+    border-bottom: solid 5px #ddd;
+    box-shadow: 0px 5px 5px rgb(28, 148, 196);
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'Segoe UI', verdana;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 10px;
+    width: 200px;
+    text-align: center;
+}
+    .bot_linea_prod:hover{
+        box-shadow: none;
+    }
+
+.usuario_log
+{
+    border: solid 1px rgb(252, 209, 19);
+    background-color: rgb(248, 218, 78);
+    color: rgb(145, 86, 8);
+    font-size: 10px;
+    padding: 5px;
+    top: 5px;
+    right: 5px;
+    z-index: 10;
+}
+
+.btn_add{
+    border: solid 1px #aaa;
+    border-radius: 5px;
+    color: #aaa;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 3px 10px 3px 10px;
+    text-align: center;
+}
+    .btn_add:hover{
+        background-color: #eee;
+    }
+/*Boton izquierdo de la tabla*/
+.btn_table_detail{
+    background-color: #f8da4e;
+    border-bottom: none !important;
+    color: #915608;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0px !important;
+    position: relative;
+}
+.btn_table_detail a{
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+}
+    .btn_table_detail:hover{
+        background-color: #f7a50d;
+        left: -3px;
+    }
+/*Boton derecho de la tabla*/
+.add_car{
+    background-color: #f8da4e;
+    border-bottom: none !important;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    color: #915608 !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    font-size: 12px;
+    font-weight: bold;
+    position: relative;
+}
+.add_car a{
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+    .add_car:hover{
+        background-color: #f7a50d;
+        right: -3px;
+    }
+
+.img_mini{
+    box-shadow: 0px 4px 6px;
+    border: none;
+    height: 50px;
+    width: 50px;
+    vertical-align: middle;
+}
+
+.panel_filtro{
+    margin: 5px 20px 5px 20px;
+    padding: 10px;
+    position: relative;
+}
+
+.tab_container{
+    border: solid 10px #eee;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.table_info{
+    border-collapse: collapse;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: .8em;    
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.table_info caption{
+    background-color: #0078ae;
+    border: solid 1px #77d5f7;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px 10px;
+    margin-bottom: 5px;
+    position: relative;
+    /*position: fixed;
+    width: auto;*/
+}
+
+.btn_exp_excel{
+    font-size: 10px;
+    position: absolute;
+    right: 14px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+    .btn_exp_excel img{
+        height: 18px;
+        width: 18px;
+    }
+
+.table_info td{
+    border-bottom: solid 1px #eee;
+    border-collapse: collapse;
+    padding: 5px 10px;
+    text-wrap: none;
+}
+
+.table_info thead{
+    text-transform: uppercase;
+    /*position: fixed;*/
+}
+.table_info thead th{
+    background-color: #6eac2c;
+    border-right: solid 2px #fff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 5px 10px;
+}
+
+.div_foot_tab{
+    background-color: #fff;
+    border: none !important;
+    color: #fff;
+}
+    .div_foot_tab:hover{
+        background-color: #fff;
+    }
+
+.div_foot_tab td{
+    padding: 10px;
+}
+
+.div_login{
+    background-color: #fff;
+    border: solid 1px #aaa;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    box-shadow: 0px 6px 5px -5px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 50px;
+    position: relative;
+    text-align: center;
+    width: 300px;
+}
+.txt_login{
+    padding: 5px;
+    font-size: 15px;
+}
+
+.foot_login{
+    background-color: #0080FF;
+    background-image: url("../ArchivosGuardados/ImagenUtil/sky.png");
+    background-repeat: no-repeat;
+    background-size: 101% 100%;
+    box-shadow: 0px -5px 5px #aaa;
+    position: absolute;
+    bottom: 0px;
+    height: 6%;
+    left: 0px;
+    margin: auto;
+    padding-bottom: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.container{
+    display:table-cell;
+    vertical-align: middle;
+}
+
+.notifica{
+    font-family: verdana;
+    font-style: italic;
+    border: solid 1px #cd0a0a;
+    border-radius: 5px;
+    background-color: #fdf5ce;
+    padding: 5px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin: 10px;
+    vertical-align: middle;
+}
+
+.invisible{
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+/* MENU HORIZONTAL */
+#dvMenu li{ width: 150px }
+#dvMenu li{ display: inline-block; }
+
+/* ITEMS DE CARRO */
+
+.carrito{
+    background-color: #eee;
+    padding: 5px;
+    position: absolute;
+    overflow: none;
+    width: 160px;
+}
+.carrito table tr td{
+    border-bottom: solid 1px silver;
+}
+.item_carrito{
+    background-color: orange;
+    border: none;
+    display: block;
+    padding: 5px;
+    position: relative;
+    width: 150px;
+}
+.boton_gen_car{
+    font-size: 10px;
+    padding: 3px 5px 3px 5px;
+}
+.elim_item_car{
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+.prod_in_car{
+    background-color: #E3F6CE;
+    opacity: 0.5;
+    filter: alpha(opacity=0.5);
+}

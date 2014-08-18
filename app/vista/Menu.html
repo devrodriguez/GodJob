@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>:: Menu ::</title>
+        <meta charset="UTF-8">
+        <link href="../javascript/jQuery/FrameworkUI/css/start/jquery-ui-1.10.4.custom.min.css" rel="stylesheet" type="text/css"/>
+        <link href="../estilos/principal.css" rel="stylesheet" type="text/css"/>
+        <script src="../javascript/jQuery/Framework/jquery-1.10.2.min.js" type="text/javascript"></script>
+        <script src="../javascript/jQuery/FrameworkUI/js/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
+        <script src="../javascript/Util/PluginJs/PluginjQuery.js" type="text/javascript"></script>
+        <script src="../javascript/Util/Data.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div id="dvMenu"></div>
+        <div id="dvNotice"></div>
+        <script type="text/javascript">
+            $(function(){
+                console.log(window.location.pathname);
+                
+                data_menu[0].href = "Orden/RealizarOrden.html"; 
+                data_menu[1].href = "Orden/VerOrden.html";
+                //Menu//
+                $('#dvMenu').createMenuUI({
+                    data: data_menu
+                });
+                //Notice
+                $('#dvNotice').notification({
+                    mess: "<p>A trav&#233;s del men&#250; podr&#225; navegar por las opciones de la aplicaci&#243;n</p>",
+                    css: {position: "initial", padding: "15px", margin: "15px"}
+                });
+            });
+        </script>
+    </body>
+</html>
