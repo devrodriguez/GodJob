@@ -67,12 +67,35 @@ function VerDetalle(){
 }
 
 function EliminarOrden(){
-	var $tr = $(this).parents('tr:first');
-	var no_orden = $tr.find('td:eq(1)').text();
-	
-	var dataOrd = Ajax_DatQuery('../../control/ControlOrden.php', '_accion=cambiaEst&_orden=' + no_orden + '&_estado=3', 'GET');
-	console.log(dataOrd[0].id)
-	if(parseInt(dataOrd[0].id) > 0){
-		$tr.remove();
-	}
+	var that = this;
+	$('<div></div>').text('La orden se eliminara de forma permanente').dialog({
+        autoOpen: true,
+        modal: true,
+        buttons: {
+            'Si' : function(){
+            	var $tr = $(that).parents('tr:first');
+				var no_orden = $tr.find('td:eq(1)').text();		
+				var dataOrd = Ajax_DatQuery('../../control/ControlOrden.php', '_accion=cambiaEst&_orden=' + no_orden + '&_estado=3', 'GET');
+
+				if(parseInt(dataOrd[0].id) > 0){
+					$tr.remove();
+				} else {
+					$('<div></div>').jalert({message: 'La orden debe estar en estado GENERADA.'});
+				}
+				//Cerrar
+                $(this).dialog('close');
+            },
+            'No': function(){
+            	//Cerrar
+            	$(this).dialog('close');
+            }
+        },
+        create: function(event, ui){
+            $(this).parents('div:first').find(".ui-dialog-titlebar").remove();
+        },
+        close: function(){
+        	//Eliminar
+            $(this).remove();
+        }
+    });
 }

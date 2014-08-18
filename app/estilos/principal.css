@@ -258,8 +258,6 @@ input[type="file"]{
     background-color: #fdf5ce;
     padding: 5px;
     position: absolute;
-    top: 0px;
-    left: 0px;
     margin: 10px;
     vertical-align: middle;
 }

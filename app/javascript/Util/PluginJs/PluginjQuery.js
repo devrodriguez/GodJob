@@ -45,12 +45,13 @@
         },
         notification: function(options){
             var opt = $.extend({
-                mess: "Alert",
+                mess: "",
                 image: false,
                 urlImage: "../Images/",
                 cssStyle: "notifica",
                 css: {}
             }, options);
+
             return this.each(function(){
                 $(this).addClass(opt.cssStyle);
                 if(opt.image) { $(this).append("<img src=\"" + opt.urlImage + "\" />"); }
@@ -58,8 +59,7 @@
                 $(this).css(opt.css);
             });
         },
-        loading: function(options){
-            
+        loading: function(options){            
             return this.each(function(){
                 if (options == 'open') {
                     $(this).dialog({
@@ -70,6 +70,28 @@
                     $(this).dialog(options)
                 };
             });            
+        },
+        jalert: function(options){
+            var opt = $.extend({
+                message : ''
+            }, options);
+
+            $(this).html('<span>'+opt.message+'</span>');
+            $(this).dialog({
+                autoOpen: true,
+                modal: true,
+                buttons: {
+                    'Aceptar' : function(){ 
+                        $(this).dialog('close');
+                    }
+                },
+                create: function(event, ui){
+                    $(this).parents('div:first').find(".ui-dialog-titlebar").remove();
+                },
+                close: function(){
+                    $(this).remove();
+                }
+            });
         }
     });
 })(jQuery);

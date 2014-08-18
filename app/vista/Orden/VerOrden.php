@@ -5,9 +5,10 @@
     }
  ?>
 <!DOCTYPE html>
-<meta http-equiv="x-ua-compatible" content="IE=7, IE=8, IE=9, IE=Edge">
-<html>
+<html lang="es">
 <head>
+	<meta http-equiv="x-ua-compatible" content="IE=7, IE=8, IE=9, IE=Edge" />
+	<meta charset="utf-8" />
 	<title>:: Ver Orden ::</title>
 	<link href="../../estilos/principal.css" rel="stylesheet" type="text/css"/>
 	<link href="../../javascript/jquery/frameworkui/css/start/jquery-ui-1.10.4.custom.min.css" rel="stylesheet" type="text/css"/>
