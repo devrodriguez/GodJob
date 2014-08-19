@@ -101,7 +101,7 @@
 			$headers[] = "MIME-Version: 1.0";
 			$headers[] = "Content-type: text/html; charset=iso-8859-1";
 			$headers[] = "FROM: informacion@godjob.com.co";
-			$subject = "Nueva Orden - ".$_SESSION['seccion_id'];
+			$subject = "Nueva Orden - ".$_SESSION['seccion'];
 			$bodyHTML = '
 			<html>
 			<body>

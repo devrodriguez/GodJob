@@ -5,9 +5,6 @@ $(document).on('ready', function(){
     $('#dvMenu').createMenuUI({
         data: data_menu
     });
-    //-----//
-    //Crear tabla//
-    CargarTabla();
 
     //Crear dialog de carrito//
     $('#dvCarrito').dialog({
@@ -66,7 +63,10 @@ $(document).on('ready', function(){
     $('#dvCarrito table').on('click', '.elim_item_car', function(){
         $(this).parents('tr:first').remove();
     });
-
+    //Fin carrito//
+    //Crear tabla//
+    CargarTabla();
+    //Fin tabla//
     //## Filtros ##//
     dataLin = Ajax_DatQuery('../../control/ControlLineaProducto.php', '_accion=ver');
     $('#txtFilLinea').autocomplete({

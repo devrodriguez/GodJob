@@ -6,10 +6,10 @@
  ?>
 <!DOCTYPE html>
 <meta http-equiv="x-ua-compatible" content="IE=7, IE=8, IE=9, IE=Edge">
-<html>
+<html lang="es">
     <head>
-        <title>:: Realizar Orden ::</title>
         <meta charset="UTF-8">
+        <title>:: Realizar Orden ::</title>
         <link href="../../javascript/jquery/frameworkui/css/start/jquery-ui-1.10.4.custom.min.css" rel="stylesheet" type="text/css"/>
         <link href="../../estilos/principal.css" rel="stylesheet" type="text/css"/>
         <script src="../../javascript/jquery/framework/jquery-1.10.2.min.js" type="text/javascript"></script>

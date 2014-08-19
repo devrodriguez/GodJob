@@ -1,12 +1,11 @@
 ;
 $(document).on('ready', function(){
-
 	//Menu//
 	var data_menu = Ajax_DatQuery('../../modelo/Menu.php', {}, 'POST');
     $('#dvMenu').createMenuUI({
         data: data_menu
     });
-    //-----//
+    
 	$.ajaxSetup({ cache: false });
 
 	$('<div></div>', {id: 'dvOrdDet', title: ':: Cambiar Estado de Orden ::'}).dialog({

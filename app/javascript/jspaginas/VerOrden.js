@@ -5,8 +5,7 @@ $(document).on('ready', function(){
     $('#dvMenu').createMenuUI({
         data: data_menu
     });
-    //-----//
-	//var dataOrd = Ajax_DatQuery('../../control/ControlOrden.php', '_accion=ver&_id=-1', 'GET');
+    
 	var dataOrd = Ajax_DatQuery('../../control/ControlOrden.php', '_accion=verxlineasec', 'GET');
 	$('<div></div>').appendTo('body').createTable({
 		data : dataOrd,
