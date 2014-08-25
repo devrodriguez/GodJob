@@ -7,6 +7,7 @@
 <!DOCTYPE html>
 <!-- Use Internet Explorer 9 Standards mode -->
 <meta http-equiv="x-ua-compatible" content="IE=7, IE=8, IE=9, IE=Edge">
+<meta charset="utf-8"/>
 <html>
 <head>
 	<title>:: Editar Usuario ::</title>
@@ -44,7 +45,7 @@
 	<div id="newUsu" title="Editar Usuario" style="font-size:12px;display:none;">
 		<table>
 			<tr>
-				<td><strong>Identificacion&nbsp;</strong></td>
+				<td><strong>Identificación&nbsp;</strong></td>
 				<td><input id="txtIdent" name="nombre" type="text" /></td>
 			</tr>
 			<tr>

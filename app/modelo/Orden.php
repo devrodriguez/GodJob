@@ -1,14 +1,14 @@
 <?php 
-	require '../datos/db/Conexion_DB.php';
+	require '../datos/GetDataComun.php';
 	require '../phputil/Util.php';
 	
-	class Orden //extends AnotherClass
+	class Orden extends GetDataComun
 	{
-		var $id;
-		var $producto;
-		var $unidad;
-		var $valTot;
-		var $estado;
+		protected $id;
+		protected $producto;
+		protected $unidad;
+		protected $valTot;
+		protected $estado;
 
 		function __construct($id, $prod, $unds, $valTot, $estado)
 		{
@@ -19,44 +19,28 @@
 			$this->estado = $estado;
 		}
 
-		function Get_Data_Array($query)
-		{
-			$con = new Conexion_DB();
-			$stat = $con->Open();
-			
-			if ($resi = $stat->query($query) or die('Error: '.mysqli_error($stat))) {
-				$rows = array();
-				while ($row = $resi->fetch_assoc()) {
-					$rows[] = $row;
-				}
-				$resi->free();
-				$con->Close();				
-				return $rows;
-			}	
-		}
-
-		function Ver()
+		public function Ver()
 		{
 			$query = "CALL ConsultarOrden('$this->id');";
 			$rows = $this->Get_Data_Array($query);
 			return json_encode($rows);
 		}
 
-		function VerPorLineaSeccion($linea, $seccion){
+		public function VerPorLineaSeccion($linea, $seccion){
 			$usuario = $_SESSION['userid'];
 			$query = "CALL ConsultarOrdenLineaSecc('$linea', '$seccion', '$usuario');";
 			$rows = $this->Get_Data_Array($query);
 			return json_encode($rows);
 		}
 
-		function VerTodo()
+		public function VerTodo()
 		{
 			$query = "CALL ConsultarTodoOrden('$this->id');";
 			$rows = $this->Get_Data_Array($query);
 			return json_encode($rows);	
 		}
 
-		function Crear()
+		public function Crear()
 		{
 			$usuario = $_SESSION['userid'];
 			$query = "CALL CrearOrden(0, 1, '$usuario');";
@@ -64,14 +48,14 @@
 			return json_encode($rows);
 		}
 
-		function CrearDescripcion($id, $producto, $unidad, $obs)
+		public function CrearDescripcion($id, $producto, $unidad, $obs)
 		{
 			$query = "CALL CrearDescripcionOrden('$id', '$producto', '$unidad', '$obs');";
 			$rows = $this->Get_Data_Array($query);
 			return $rows;
 		}
 
-		function CambiarEstado()
+		public function CambiarEstado()
 		{
 			$usuario = $_SESSION['userid'];
 			$query = "CALL CambiarEsadoOrden('$this->id', '$this->estado', '$usuario');";
@@ -79,19 +63,19 @@
 			return json_encode($rows);			
 		}		
 
-		function EliminarProducto($producto){
+		public function EliminarProducto($producto){
 			$query = "CALL EliminarProductoOrden('$this->id', '$producto');";
 			$rows = $this->Get_Data_Array($query);
 			return json_encode($rows);
 		}
 
-		function EditarCantProductoOrden($producto, $cantidad){
+		public function EditarCantProductoOrden($producto, $cantidad){
 			$query = "CALL EditarCantProductoOrden('$this->id', '$producto', '$cantidad');";
 			$rows = $this->Get_Data_Array($query);
 			return json_encode($rows);
 		}
 
-		function EnviarCorreoOrdenCreada($orden)
+		public function EnviarCorreoOrdenCreada($orden)
 		{
 			$headers = array();
 
@@ -113,7 +97,7 @@
 			mail("javier.riano@hotmail.com,john.rodriguez.25@hotmail.com", $subject, $bodyHTML, implode("\r\n", $headers));
 		}
 
-		function ExportToExcel(){
+		public function ExportToExcel(){
 			$usuario = $_SESSION['userid'];
 			$url = array();
 			$util = new Util();
@@ -126,7 +110,7 @@
 			return json_encode($url);
 		}
 
-		function ExportToExcelEdit(){
+		public function ExportToExcelEdit(){
 			$url = array();
 			$util = new Util();
 			$query = "CALL ConsultarOrden('$this->id');";

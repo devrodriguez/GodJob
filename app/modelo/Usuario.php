@@ -1,16 +1,16 @@
 <?php 
-	require '../datos/db/Conexion_DB.php';
+	require '../datos/GetDataComun.php';
 
-	class Usuario
+	class Usuario extends GetDataComun
 	{
-		var $codigo;
-		var $identi;
-		var $nombre;
-		var $usuario;
-		var $contra;
-		var $correo;
-		var $perfil;
-		var $seccion;
+		protected $codigo;
+		protected $identi;
+		protected $nombre;
+		protected $usuario;
+		protected $contra;
+		protected $correo;
+		protected $perfil;
+		protected $seccion;
 
 		function __construct($codigo, $identi, $nombre, $usuario, $contra, $correo, $perfil, $seccion)
 		{
@@ -22,22 +22,6 @@
 			$this->correo = $correo;
 			$this->perfil = $perfil;
 			$this->seccion = $seccion;
-		}
-
-		function Get_Data_Array($query)
-		{
-			$con = new Conexion_DB();
-			$stat = $con->Open();
-			
-			if ($resi = $stat->query($query) or die('Error: '.mysqli_error($stat))) {
-				$rows = array();
-				while ($row = $resi->fetch_assoc()) {
-					$rows[] = $row;
-				}
-				$resi->free();
-				$con->Close();				
-				return $rows;
-			}	
 		}
 
 		function Ver()

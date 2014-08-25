@@ -1,10 +1,10 @@
 <?php
-	require '../datos/db/Conexion_DB.php';
+	require '../datos/GetDataComun.php';
 
-	class Categoria
+	class Categoria extends GetDataComun
 	{
-		var $CA_ID;
-		var $CA_Desc;
+		protected $CA_ID;
+		protected $CA_Desc;
 
 		function __construct($id, $desc){
 			$this->CA_ID = $id;
@@ -13,18 +13,8 @@
 
 		function Ver()
 		{
-			$con = new Conexion_DB();
-			$stat = $con->Open();
 			$query = "CALL ConsultarCategorias();";
-
-			if ($resi = $stat->query($query)) {
-				$rows = array();
-				while ($row = $resi->fetch_assoc()) {
-					$rows[] = $row;
-				}
-				$resi->free();
-				$con->Close();
-				return json_encode($rows);
-			}
+			$rows = $this->Get_Data_Array($query);
+			return json_encode($rows);
 		}
 	}

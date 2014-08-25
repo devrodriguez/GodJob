@@ -1,20 +1,14 @@
 <?php
 	class Conexion_DB
 	{
-		private $host;
-		private $user;
-		private $pass;
-		private $port;
-		private $dataBase;
+		private $host = "127.0.0.1";
+		private $user = "root";
+		private $pass = "";
+		private $port = "";
+		private $dataBase = "db_ordenes";
 		private $mys;
 
-		function __construct()
-		{
-			$this->host = "127.0.0.1";
-			$this->user = "root";
-			$this->pass = "";
-			$this->dataBase = "db_ordenes";			
-		}
+		function __construct(){}
 
 		function Open()
 		{

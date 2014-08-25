@@ -1,4 +1,7 @@
 <?php 
+	/*
+	Clase que contiene metodos utiles para realizar tareas repetitivas
+	*/
 	require 'PHPExcel/PHPExcel.php';
 
 	class Util

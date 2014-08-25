@@ -1,10 +1,10 @@
 <?php
-	require '../datos/db/Conexion_DB.php';
+	require '../datos/GetDataComun.php';
 
-	class UnidadMedida
+	class UnidadMedida extends GetDataComun
 	{
-		var $UM_ID;
-		var $UM_Desc;
+		protected $UM_ID;
+		protected $UM_Desc;
 
 		function __construct($id, $desc){
 			$this->UM_ID = $id;
@@ -13,18 +13,8 @@
 
 		function Ver()
 		{
-			$con = new Conexion_DB();
-			$stat = $con->Open();
 			$query = "CALL ConsultarUnidadMedida();";
-
-			if ($resi = $stat->query($query)) {
-				$rows = array();
-				while ($row = $resi->fetch_assoc()) {
-					$rows[] = $row;
-				}
-				$resi->free();
-				$con->Close();
-				return json_encode($rows);
-			}
+			$rows = $this->Get_Data_Array($query);
+			return json_encode($rows);
 		}
 	}
