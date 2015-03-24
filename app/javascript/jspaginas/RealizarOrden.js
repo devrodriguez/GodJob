@@ -1,4 +1,25 @@
 ;
+//Crear modelo de producto//
+var Productos = function(){
+    this.idProd = '';
+    this.nombre = '';
+    this.precio = 0;
+    this.imagen = '';
+    this.medida = '';
+    this.cantidad = 1;
+    this.obs = '';
+    this.idOrd = '';
+}
+
+//Crear modelo de orden//
+var Orden = function(){
+    this.productos = new Array();
+    this.addProducto = function(prod){  
+        this.productos.push(prod);  
+    }
+}
+
+
 $(document).on('ready', function(){
     //Menu//
     var data_menu = Ajax_DatQuery('../../modelo/Menu.php', {}, 'POST');
@@ -109,26 +130,26 @@ function CargarTabla(){
             'Sucursal':{}
         },
         btn_addToCar: {
-            'Add' : AgregarMisProductos
+            'Add' : AgregarProductoCarro
         }
     });
 }
 
-function AgregarMisProductos(){
+function AgregarProductoCarro(){
+    var producto = new Productos();
     var $tr = $(this).parents('tr:first');
     $tr.addClass('prod_in_car');
-    var datProd = {
-        idProd: $tr.find('td:eq(0)').text(),
-        nombre: $tr.find('td:eq(1)').text(),
-        precio: $tr.find('td:eq(2)').text(),
-        imagen: $tr.find('.img_mini').attr('src'),
-        medida: $tr.find('td:eq(5)').text(),
-        cantidad: 1
-    }
+    
+    producto.idProd = $tr.find('td:eq(0)').text();
+    producto.nombre = $tr.find('td:eq(1)').text();
+    producto.precio = $tr.find('td:eq(2)').text();
+    producto.imagen = $tr.find('.img_mini').attr('src');
+    producto.medida = $tr.find('td:eq(5)').text();
+    producto.cantidad = 1;
 
     $('#dvCarrito').agregar({
         spinFun : ContarMisProductos,
-        data : datProd,
+        data : producto,
         btn_del : {
             'Sacar' : function(cont){
                 var that = this;
@@ -173,36 +194,26 @@ function AgregarMisProductos(){
 
 function RealizarOrden(){
     var $trs;
-    //Crear modelo de producto//
-    var Producto = function(id, und, orden, obser){
-        this.idOrd = orden;
-        this.idPr = id;
-        this.und = und;
-        this.obs = obser;
-    }
-    //Crear modelo de orden//
-    var Orden = function(){
-        this.productos = new Array();
-    }
-
-    Orden.prototype.addProducto = function(prod){  
-        this.productos.push(prod);  
-    }
-    //---------------// 
 
     var dataProd = Ajax_DatQuery('../../control/ControlOrden.php', '_accion=crear', 'GET');
     if(parseInt(dataProd[0].id) > 0)
     {
-        newOrd = new Orden();
+        var newOrd = new Orden();
         //Obtener filas//
         $trs = $('#dvCarrito table tr');
         //Crear orden//
         $.each($trs, function(key, item){
-            newOrd.addProducto(new Producto($(this).find('[id*=hdfId]').val(), $(this).find('[id*=txtCant]').val(), dataProd[0].id, $(this).find('[id*=taObs]').val()));
+            var producto = new Productos();
+            producto.idOrd = dataProd[0].id;
+            producto.idProd = $(this).find('[id*=hdfId]').val();
+            producto.cantidad = $(this).find('[id*=txtCant]').val();
+            producto.obs = $(this).find('[id*=taObs]').val();
+            newOrd.addProducto(producto);
         });
 
         //Enviar orden//
         var dataOrd = Ajax_DatQuery('../../control/ControlOrden.php', '_accion=crearDetalle&data=' + JSON.stringify(newOrd), 'GET');
+
         if (dataOrd) {
             newOrd = new Orden();
             $('#dvCarrito').descargar();

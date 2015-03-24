@@ -26,7 +26,7 @@
 		$ordenDes = new Orden('','','','','');
 		$obj = json_decode($_GET['data'], true);
 		foreach ($obj["productos"] as $value) {
-			$ins[] = $ordenDes->CrearDescripcion(intval($value["idOrd"]), intval($value["idPr"]), intval($value["und"]), $value["obs"]);
+			$ins[] = $ordenDes->CrearDescripcion(intval($value["idOrd"]), intval($value["idProd"]), intval($value["cantidad"]), $value["obs"]);
 		}
 		//Enviar correo//
 		//var_dump($obj["productos"][0]["idOrd"]);
