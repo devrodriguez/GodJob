@@ -8,6 +8,7 @@
  <!DOCTYPE html>
  <html>
  <head>
+ 	<meta charset="UTF-8">
  	<title>:: Informe Totales - Mensual ::</title>
  	<link href="../../javascript/jquery/frameworkui/css/start/jquery-ui-1.10.4.custom.min.css" rel="stylesheet" type="text/css"/>
     <link href="../../estilos/principal.css" rel="stylesheet" type="text/css"/>
@@ -27,8 +28,15 @@
 	<div class="ui-state-active ui-corner-all ui-accordion-header panel_filtro">
 		<span>Mes&nbsp;</span>
 		<select id="slMes">
-			<option value="-1">------</option>
 		</select>
+		<span>Año&nbsp;</span>
+		<select id="slAno">
+			<option value="2014">2014</option>
+			<option value="2015">2015</option>
+			<option value="2016">2016</option>
+		</select>
+		&nbsp;
+		<button id="btnInforme">Consultar</button>
 	</div>
 	
 	<div id="dvTab"></div>

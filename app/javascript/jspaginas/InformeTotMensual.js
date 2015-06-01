@@ -6,17 +6,22 @@ $(document).on('ready', function(){
         data: data_menu
     });
 
+    $('#btnInforme').on('click', function(e){
+    	CargarTabla($('#slMes').val(), $('#slAno').val());
+    });
+
 	//Cargar lista de meses//
-	CargarListaMeses();
-	$('#slMes').on('change', function(){
-		CargarTabla($(this).val());
-	})
+	CargarListaMeses()
+
+	$('#slMes').val(new Date().getMonth()+1);
+	$('#slAno').val(new Date().getFullYear());
+	$('#btnInforme').button();
 });
 
-function CargarTabla(mes){
+function CargarTabla(mes, ano){
     $('<div id="dvLoad">Loading...</div>').loading('open')
     //## Crear Tabla ##//
-    var dataOrd = Ajax_DatQuery('../../control/ControlInforme.php', '_accion=verxmes&_mes=' + mes, 'GET');
+    var dataOrd = Ajax_DatQuery('../../control/ControlInforme.php', '_accion=verxmes&_mes=' + mes + '&_ano=' + ano, 'GET');
     if(dataOrd){
 	    $('#dvTab').empty();
 	    $('#dvTab').createTable({
@@ -42,7 +47,7 @@ function CargarTabla(mes){
 	}
 	
 	$('.btn_exp_excel').on('click', function(){
-		var dataExp = Ajax_DatQuery('../../control/ControlInforme.php', '_accion=ordmens_ex&_mes=' + mes, 'GET');
+		var dataExp = Ajax_DatQuery('../../control/ControlInforme.php', '_accion=ordmens_ex&_mes=' + mes  + '&_ano=' + ano, 'GET');
 		$(this).attr('href', '../../ArchivosGuardados/ExcelExport/' + dataExp.url);
 	});
 }

@@ -16,6 +16,7 @@
 		height: 100%;
 		padding-top: 50px;
 	}
+	
 	</style>
 	<script src="../javascript/jquery/framework/jquery-1.10.2.min.js" type="text/javascript"></script>
 </head>
@@ -27,6 +28,9 @@
 			<h3 style="color:#bbb;">A continuaci&#243;n encontrara los cat&#225;logos disponibles para generaci&#243;n de ordenes,</h3>
 			<h3 style="color:#bbb;">por favor seleccione uno de los cat&#225;logos para realizar su producto.</h3>
 		</div>
+		<select id="selClientes">
+			<option>Marval S.A</option>
+		</select>
 		<table align="center">
 			<tr>
 				<td>

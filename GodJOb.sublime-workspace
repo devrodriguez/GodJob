@@ -291,11 +291,68 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "/C/Users/john/Desktop/Administrator",
+			"settings":
+			{
+				"buffer_size": 24,
+				"line_ending": "Windows",
+				"name": "Administrator"
+			}
+		},
+		{
+			"file": "app/modelo/Categoria.php",
+			"settings":
+			{
+				"buffer_size": 362,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/vista/InicioLinea.php",
+			"settings":
+			{
+				"buffer_size": 1977,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/javascript/jspaginas/InicioLinea.js",
+			"settings":
+			{
+				"buffer_size": 206,
+				"line_ending": "Windows",
+				"name": "InicioLinea.js"
+			}
+		},
+		{
+			"contents": "Package Control Messages\n========================\n\nPackage Control:\n---------------\n\n  Version 3.0 Release Notes\n  \n  \n  **** Windows Sublime Text 3 Users ****\n  \n  Due to a bug in Package Control 2.0, Windows ST3 users will need to open the\n  Sublime Text console (ctrl+`) and execute the following Python to properly\n  upgrade. All other users may ignore this part of the message.\n  \n  Make sure NOT to copy the leading two spaces, or an \"unexpected indent\" error\n  will occur.\n  \n  import urllib.request,os,sys; exec(\"if sys.version_info < (3,) or os.name != 'nt': raise OSError('This code is for Windows ST3 only!')\"); pr='Preferences.sublime-settings'; ip='ignored_packages'; n='Package Control'; s=sublime.load_settings(pr); ig=s.get(ip); ig.append(n); s.set(ip,ig); sublime.save_settings('Preferences.sublime-settings'); pf=n+'.sublime-package'; urllib.request.install_opener(urllib.request.build_opener(urllib.request.ProxyHandler())); by=urllib.request.urlopen('https://packagecontrol.io/'+pf.replace(' ','%20')).read(); open(os.path.join(sublime.installed_packages_path(),pf),'wb').write(by); ig.remove(n); s.set(ip,ig); sublime.save_settings(pr); print('Package Control: 3.0.0 upgrade successful!')\n  \n  ********\n  \n  \n  Package Control 3.0 adds a bunch of polish, improving the Sublime Text\n  experience for users and package developers:\n  \n   - improved upgrades of themes, color schemes and syntaxes\n   - dependency support\n   - SSL for Linux\n   - new secondary Windows HTTP backend\n   - patches for Python in Sublime Text 2 on Windows\n   - commands to easily remove channels and repositories\n   - an events API for packages\n   - improved documentation\n  \n  \n  As of July 2014, I now work for myself. This has allowed me to spend more time\n  working on open source software, including Package Control. If you appreciate\n  the work I've done, please consider a small donation. If even 5% of regular\n  users donated the price of a coffee or beer, that would cover quite a bit of\n  my development time! See https://packagecontrol.io/about for options.\n  \n  \n  Some recent Package Control stats:\n  \n   - every weekday over 1M JSON requests hit the channel server\n   - in December, the channel server will transmit 4TB+ of compressed JSON\n   - users have installed, upgraded or removed 85M+ packages since late 2011\n  \n  \n  Read more about the release at:\n  \n  https://packagecontrol.io/news#2014-12-23-Package_Control_30_Released\n  \n",
+			"settings":
+			{
+				"buffer_size": 2443,
+				"line_ending": "Windows",
+				"name": "Package Control Messages",
+				"scratch": true
+			}
+		},
+		{
+			"file": "app/javascript/jspaginas/VerUsuario.js",
+			"settings":
+			{
+				"buffer_size": 3885,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
 	"command_palette":
 	{
 		"height": 392.0,
+		"last_filter": "",
 		"selected_items":
 		[
 		],
@@ -317,8 +374,20 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/C/xampp/htdocs/GodJob/app/javascript",
+		"/C/xampp/htdocs/GodJob/app/javascript/jspaginas",
+		"/C/xampp/htdocs/GodJob/app/vista"
+	],
 	"file_history":
 	[
+		"/C/xampp/htdocs/GodJob/app/estilos/principal.css",
+		"/D/Desarrollos/BootstrapTable/TableMaster.html",
+		"/C/xampp/htdocs/GodJob/app/javascript/Util/PluginJs/Plugin.Table.JQuery.js",
+		"/C/xampp/htdocs/GodJob/app/javascript/jspaginas/VerOrden.js",
+		"/C/xampp/htdocs/GodJob/app/control/ControlOrden.php",
+		"/C/xampp/htdocs/GodJob/app/javascript/jspaginas/RealizarOrden.js",
 		"/C/xampp/htdocs/GodJob/.htaccess",
 		"/C/xampp/htdocs/GodJob/phpinfo.php",
 		"/C/xampp/htdocs/PruebaLaravel/laravel/app/database/seeds/DatabaseSeeder.php",
@@ -371,16 +440,12 @@
 		"/C/xampp/htdocs/Cursos/CursoPHP/View.php",
 		"/C/xampp/htdocs/Cursos/CursoPHP/HelloWorld.php",
 		"/C/Users/john/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
-		"/C/xampp/htdocs/GodJob/app/control/ControlOrden.php",
-		"/C/xampp/htdocs/GodJob/app/javascript/jspaginas/RealizarOrden.js",
 		"/C/xampp/htdocs/GodJob/app/vista/Orden/EditarOrden.php",
-		"/C/xampp/htdocs/GodJob/app/javascript/jspaginas/VerOrden.js",
 		"/C/xampp/htdocs/GodJob/app/vista/Orden/VerOrden.php",
 		"/C/xampp/htdocs/GodJob/app/vista/Orden/FormatoOrden.php",
 		"/C/xampp/htdocs/GodJob/app/vista/Orden/RealizarOrden.php",
 		"/C/xampp/htdocs/GodJob/app/javascript/Util/PluginJs/PluginjQuery.js",
 		"/C/xampp/htdocs/GodJob/app/control/ControlUnidadMedida.php",
-		"/C/xampp/htdocs/GodJob/app/estilos/principal.css",
 		"/C/xampp/htdocs/OrdenesProductos/app/control/ControlOrden.php",
 		"/C/xampp/htdocs/OrdenesProductos/app/modelo/Orden.php",
 		"/C/xampp/htdocs/OrdenesProductos/app/vista/Orden/VerOrden.php",
@@ -444,13 +509,11 @@
 		"/D/Documentos/Desarrollos/PHP/Carros/GastosViaje.php",
 		"/D/Documentos/Desarrollos/PHP/Carros/Viaje.php",
 		"/C/xampp/htdocs/OrdenesProductos/app/Login/Inicio.php",
-		"/C/Users/john/Dropbox/Proyecto/Desarrollo/OrdenesProductos_10052014/app/javascript/JSPaginas/Producto.js",
-		"/C/Users/john/Dropbox/Proyecto/Desarrollo/OrdenesProductos_19052014/app/javascript/JSPaginas/EditarProducto.js",
-		"/C/Users/john/Dropbox/Proyecto/Desarrollo/OrdenesProductos_20052014/app/javascript/JSPaginas/EditarProducto.js"
+		"/C/Users/john/Dropbox/Proyecto/Desarrollo/OrdenesProductos_10052014/app/javascript/JSPaginas/Producto.js"
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
@@ -461,9 +524,20 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": true,
+		"case_sensitive": false,
 		"find_history":
 		[
+			"select",
+			"sales pers",
+			"AgregarMisProductos",
+			"Orden",
+			"data",
+			"AgregarMisProductos",
+			"newOrd",
+			"Producto",
+			"EliminarPedido",
+			"verorden",
+			"EliminarOrden",
 			"var",
 			"else",
 			"ExportToExcel",
@@ -580,18 +654,7 @@
 			"ConsultarGastoViaje",
 			"CargarGastosViaje",
 			"EliminarGastoViaje",
-			"CargarGastosViaje",
-			"ValidaInserta",
-			"CrearGastoViaje",
-			"idGV",
-			"ConstruirFila",
-			"dvDetalles",
-			"CargarGastosViaje",
-			"ConsultarGastoViaje",
-			"CargarGastosViaje",
-			"ConsultarGastoViaje",
-			"EliminarGastoViaje",
-			"CrearGastoViaje"
+			"CargarGastosViaje"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -611,14 +674,189 @@
 		"reverse": false,
 		"show_context": true,
 		"use_buffer2": true,
-		"whole_word": true,
+		"whole_word": false,
 		"wrap": true
 	},
 	"groups":
 	[
 		{
+			"selected": 4,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/C/Users/john/Desktop/Administrator",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 24,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								24,
+								24
+							]
+						],
+						"settings":
+						{
+							"auto_name": "Administrator",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/modelo/Categoria.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 362,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								219,
+								219
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/vista/InicioLinea.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1977,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1075,
+								1086
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 45.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/javascript/jspaginas/InicioLinea.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 206,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								206,
+								206
+							]
+						],
+						"settings":
+						{
+							"auto_name": "InicioLinea.js",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2443,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2443,
+								2443
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/javascript/jspaginas/VerUsuario.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 3885,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								325,
+								325
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 135.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -657,6 +895,7 @@
 	{
 		"height": 0.0
 	},
+	"pinned_build_system": "",
 	"project": "GodJOb.sublime-project",
 	"replace":
 	{
@@ -666,6 +905,7 @@
 	"select_file":
 	{
 		"height": 0.0,
+		"last_filter": "",
 		"selected_items":
 		[
 		],
@@ -674,6 +914,7 @@
 	"select_project":
 	{
 		"height": 500.0,
+		"last_filter": "",
 		"selected_items":
 		[
 			[
@@ -686,11 +927,13 @@
 	"select_symbol":
 	{
 		"height": 0.0,
+		"last_filter": "",
 		"selected_items":
 		[
 		],
 		"width": 0.0
 	},
+	"selected_group": 0,
 	"settings":
 	{
 	},

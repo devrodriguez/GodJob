@@ -20,6 +20,11 @@ input[type="file"]{
     width: 200px;
 }
 
+select{
+    border-color: #eee;
+    padding: 3px;
+}
+
 .cont_bot_linea{
     height: 50%; width: auto; margin: 0 auto; background-color: #fff; padding: 20px; 
     border-top: solid 2px #eee;
